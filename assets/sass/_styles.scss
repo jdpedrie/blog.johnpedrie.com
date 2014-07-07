@@ -18,6 +18,7 @@ h1,h2,h3,h4,h5 {
 
 p {
     margin-bottom: $lh;
+    overflow-y: auto;
 }
 
 a, a:visited, a:active {
@@ -67,6 +68,7 @@ code {
     font-family: "Monaco", "Courier New", "Courier";
     font-size: .75em;
     font-weight: bold;
+    white-space: pre;
 }
 
 .highlight {
@@ -80,6 +82,7 @@ code {
         color: $white;
         font-family: "Monaco", "Courier New", "Courier";
         font-size: .9em;
+        white-space: pre;
         .lineno {
             margin-right: $lh/2;
             color: $grey-light;

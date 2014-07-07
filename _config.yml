@@ -2,7 +2,7 @@ title:            blog dot johnpedrie dot com
 tagline:          Programming &amp; etc.
 description:      Describe your website.
 #Comment out url when working locally to resolve base urls correctly
-url: http://blog.johnpedrie.com
+#url: http://blog.johnpedrie.com
 
 # Owner/author information
 owner:
