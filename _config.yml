@@ -34,7 +34,7 @@ links:
 timezone:    America/Detroit
 future:      true
 pygments:    true
-markdown:    kramdown
+markdown:    redcarpet
 
 kramdown:
   auto_ids: true
