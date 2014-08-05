@@ -62,7 +62,7 @@ ENV               = 'test'
 
 `/var/www/public/wp-config.php`:
 
-````php
+````PHP
 <?php
 
 $config = parse_ini_file(__DIR__ .'/../wp-config.ini', true);

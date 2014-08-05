@@ -336,6 +336,10 @@ code {
   color: #87ceeb;
 }
 
+.highlight code span {
+  line-height: 1.3em;
+}
+
 hr {
   display: block;
   margin: 0 auto;
