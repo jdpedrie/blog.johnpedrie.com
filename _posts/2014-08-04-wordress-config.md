@@ -18,7 +18,9 @@ There are a multitude of reasons why this isn't a great way to do it. Let's talk
 
 Hopefully I've convinced you. Now where do we go from here?
 
-I believe the best way to manage your WordPress configuration is in a .ini file stored one level above the web root. Let's take a look at how it would work.
+The simplest solution is to simply move your `wp-config.php` file one level above your web root. WordPress will search for it there. But I think there's a better way. I believe the best way to manage your WordPress configuration is in a .ini file stored one level above the web root. There are a couple of reasons. First, I think using `.ini` files is a better option, simply because they're created specifically for configuration. Secondly, I don't like relying on non-obvious solutions like letting WordPress scan up the directory tree to try and find a file. It makes things harder on someone later who is trying to figure out what's happening.
+
+If moving the php file works for you, you can stop reading! If you're interested in seeing what I think is a better way, let's go ahead and take a look at how it would work.
 
 `/var/www/wp-config.ini`:
 
@@ -108,5 +110,7 @@ require_once( ABSPATH . 'wp-settings.php' );
 ````
 
 Since WordPress requires that Site URLs are explicitly set, I think it's better to specify them in code rather than in the database.
+
+In our `wp-config.ini` file, I've added a section at the bottom called `[site]`. Here you can add any configuration options you need in your specific case. My example specifies a Site Environment, (i.e. test, beta, production), but you could use it for API keys or any other information that makes sense to provide sitewide. Make sure you add a corresponding definition in the `wp-config.php` file!
 
 Have you tried any alternate methods of managing WordPress configuration? I think it's clear that there's a problem. I like my solution, but I'd love to hear your ideas in the comments!
